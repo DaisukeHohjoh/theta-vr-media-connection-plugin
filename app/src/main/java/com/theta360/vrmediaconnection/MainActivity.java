@@ -26,6 +26,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.theta360.pluginlibrary.activity.PluginActivity;
+import com.theta360.pluginlibrary.activity.ThetaInfo;
 import com.theta360.pluginlibrary.callback.KeyCallback;
 import com.theta360.pluginlibrary.receiver.KeyReceiver;
 import com.theta360.pluginlibrary.values.LedColor;
@@ -214,7 +215,7 @@ public class MainActivity extends PluginActivity {
             throws ValidationException, LocalServiceBindingException {
         DeviceType type = new UDADeviceType("MediaServer", 1);
         DeviceDetails details = new DeviceDetails(
-                getResources().getString(R.string.friendly_name),
+                ThetaInfo.getThetaModelName(),
                 new ManufacturerDetails(getResources().getString(R.string.manufacturer)),
                 new ModelDetails(
                         getResources().getString(R.string.app_name),

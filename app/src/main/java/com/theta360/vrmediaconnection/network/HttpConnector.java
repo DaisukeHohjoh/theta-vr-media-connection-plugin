@@ -212,6 +212,7 @@ public class HttpConnector {
             parameters.put("fileType", "all");
             parameters.put("maxThumbSize", 0);
             parameters.put("startPosition", startPosition);
+            parameters.put("_detail", "true");
             input.put("parameters", parameters);
 
             OutputStream os = postConnection.getOutputStream();
